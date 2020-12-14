@@ -1,0 +1,51 @@
+﻿@model RentalKendaraan_071.Models.Peminjaman
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Hapus Data</h2>
+
+<h3>Apakah anda yakin ingin menghapus data ini?</h3>
+<div>
+    <h4>Peminjaman</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TglPeminjaman)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TglPeminjaman)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdKendaraan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdKendaraan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdCostumer)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdCostumer)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IdJaminan)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IdJaminan)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Biaya)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Biaya)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdPeminjaman" />
+        <input type="submit" value="Hapus" class="btn btn-default" /> |
+        <a asp-action="Index">Kembali</a>
+    </form>
+</div>
